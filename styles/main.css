@@ -92,9 +92,9 @@ a {
 }
 
 .fa-github {
-    background: #171515;
     color: white;
     border-radius: 50%;
+    height: 1.45vw;
 }
 
 .container {
@@ -133,6 +133,7 @@ a {
 
 .content {
     display: flex;
+    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
 
@@ -188,7 +189,7 @@ a {
 @media only screen and (max-width: 800px) {
     .fa {
         width: 1.2vh;
-    }
+    }    
 
     .home-button {
         width: 3vh;

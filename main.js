@@ -12,7 +12,7 @@ function changeContent(element) {
     element.getElementsByClassName("image")[0].style.filter = "blur(4px)";
     element.getElementsByClassName("content")[0].style.animation = "text-fade-in 2s";
     element.getElementsByClassName("content")[0].style.cursor = "default";
-    element.getElementsByClassName("content")[0].style.fontSize = "0.5em";
+    element.getElementsByClassName("content")[0].style.fontSize = "0.6em";
     element.getElementsByClassName("content")[0].style.zIndex = "10";
     element.getElementsByClassName("content")[0].innerHTML = content[element.id];
     lastOpenedElement = element
@@ -44,8 +44,8 @@ var title = {
     "fitness-container": "Fitness"
 }
 var content = {
-    "info-container": "Just a guy. \nChose software development as a career, became passionate about fitness & strength training.\nMusic is probably even closer to my heart, but it will stay a hobby for now.",
-    "dev-container": "Check out my GitHub repository to see my personal projects. <a href=\"https://github.com/ebenyu08?tab=repositories\" target=\"_blank\" class=\"fa fa-github\"></a>",
+    "info-container": "Slightly addicted to coffee. \nChose software development as a career, \nbecame passionate about fitness & strength training.\nMusic is probably even closer to my heart, \nbut it will stay as a hobby for now.",
+    "dev-container": "Check out my GitHub repository to see my personal projects. \n <a href=\"https://github.com/ebenyu08?tab=repositories\" target=\"_blank\" class=\"fa fa-github\"></a>",
     "music-container": "Soon... or not",
     "fitness-container": "Sooner..."
 }
