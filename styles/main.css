@@ -136,6 +136,8 @@ a {
     position: absolute;
     white-space: pre;
     pointer-events: auto;
+    width: 100%;
+    text-align: center;
 }
 
 /* ids */
