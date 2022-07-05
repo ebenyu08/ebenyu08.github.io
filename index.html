@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>My website</title>
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <button onclick="restoreContainer()" style="background: none; border: none; cursor: pointer;">
+      <!-- <img src="./resources/icons/home.png" style="filter: invert();"> -->
+      <svg class="home-button" xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 24 24" width="3vw"
+        preserveAspectRatio="xMidYMid slice">
+        <path d="M0 0h24v24H0z" fill="none" />
+        <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" fill="white" />
+      </svg>
+    </button>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/benjamin-egri/" target="_blank" class="fa fa-linkedin"></a>
+      <a href="https://www.instagram.com/benjamin.egri/" target="_blank" class="fa fa-instagram"></a>
+      <a href="https://www.facebook.com/benjamin.egri00/" target="_blank" class="fa fa-facebook"></a>
+    </div>
+  </header>
+  <div class="container" id="main-container">
+    <div class="column" id="info-container" onclick="fullScreen(this)">
+      <div class="image" id="info"></div>
+      <div class="content">
+        About Me
+      </div>
+    </div>
+    <div class="column" id="dev-container" onclick="fullScreen(this)">
+      <div class="image" id="dev"></div>
+      <div class="content">
+        Development
+      </div>
+    </div>
+    <div class="column" id="music-container" onclick="fullScreen(this)">
+      <div class="image" id="music"></div>
+      <div class="content">
+        Music
+      </div>
+    </div>
+    <div class="column" id="fitness-container" onclick="fullScreen(this)">
+      <div class="image" id="fitness"></div>
+      <div class="content">
+        Fitness
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

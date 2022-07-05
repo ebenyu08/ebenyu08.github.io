@@ -1,0 +1,199 @@
+html, body {
+    background-image: radial-gradient(at top right, rgb(25, 0, 0), rgba(0,0,0));
+    background-repeat: no-repeat;
+
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    position: fixed;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.8vmax;
+}
+
+header {
+    font-size: 0.5em;
+    height: 6%;
+}
+
+p {
+    font-size: 0.5em;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+/* classes */
+
+.header {
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    align-items: center;
+    /* height: 50px; */
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right: 15px;
+    color: white;
+}
+
+.home-button {
+    transition: all 0.05s;
+}
+
+.home-button:hover {
+    transform: scale(1.2);
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
+.fa {
+    padding: 7px;
+    height: 100%;
+    width: 1.5vw;
+    text-align: center;
+    text-decoration: none;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+    border-radius: 50%;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+    border-radius: 50%;
+}
+
+.fa-instagram {
+    background: #fb3958;
+    color: white;
+    border-radius: 50%;
+}
+
+.fa-github {
+    background: #171515;
+    color: white;
+    border-radius: 50%;
+}
+
+.container {
+    height: calc(100% - 20px);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.column {
+    flex: 1;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+    min-height: 0;
+    overflow: hidden;
+    transition: flex 0.5s ease-in-out;
+}
+
+.column:hover {
+    flex: 3 !important;
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.content {
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    white-space: pre;
+}
+
+/* ids */
+
+#info {
+    background-image: url('../resources/images/me.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#dev {
+    background-image: url('../resources/images/dev.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#music {
+    background-image: url('../resources/images/drums.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#fitness {
+    background-image: url('../resources/images/fitness.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* animations */
+
+@keyframes grow-text {
+    0% { 
+        transform: scale(1);
+    }
+
+    100% { 
+        transform: scale(2); 
+    }
+}
+
+@keyframes text-fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes text-fade-in-2 {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes blur-image {
+    0% { filter: blur(0px); }
+    100% { filter: blur(4px); }
+}
+
+@keyframes unblur-image {
+    0% { filter: blur(4px); }
+    100% { filter: blur(0px); }
+}
