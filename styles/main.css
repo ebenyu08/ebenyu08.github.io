@@ -4,10 +4,11 @@ html, body {
 
     height: 100%;
     width: 100%;
+    min-width: 360px;
     padding: 0;
     margin: 0;
     overflow: hidden;
-    position: fixed;
+    position: relative;
     font-family: 'Roboto', sans-serif;
     font-size: 2.8vmax;
 }
@@ -63,7 +64,7 @@ a {
 .fa {
     padding: 7px;
     height: 100%;
-    width: 1.5vw;
+    width: 1.45vw;
     text-align: center;
     text-decoration: none;
 }
@@ -131,13 +132,16 @@ a {
 }
 
 .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     color: white;
     cursor: pointer;
     position: absolute;
     white-space: pre;
     pointer-events: auto;
     width: 100%;
-    text-align: center;
 }
 
 /* ids */
@@ -168,6 +172,27 @@ a {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+}
+
+/* media */
+@media only screen and (max-width: 800px) {
+    .container {
+        flex-flow: column wrap;
+    }
+
+    .content {
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .fa {
+        width: 1.2vh;
+    }
+
+    .home-button {
+        width: 3vh;
+    }
 }
 
 /* animations */
