@@ -14,6 +14,8 @@ function changeContent(element) {
     element.getElementsByClassName("content")[0].style.cursor = "default";
     element.getElementsByClassName("content")[0].style.fontSize = "0.6em";
     element.getElementsByClassName("content")[0].style.zIndex = "10";
+    element.getElementsByClassName("content")[0].style.height = "auto";
+    element.getElementsByClassName("content")[0].style.background = "rgba(0, 0, 0, 0.3)";
     element.getElementsByClassName("content")[0].innerHTML = content[element.id];
     lastOpenedElement = element
     
@@ -27,6 +29,7 @@ function restoreContainer() {
     lastOpenedElement.getElementsByClassName("content")[0].style.animation = "text-fade-in-2 1s";
     lastOpenedElement.getElementsByClassName("image")[0].style.animation = "unblur-image 1s";
     lastOpenedElement.getElementsByClassName("image")[0].style.filter = "blur(0px)";
+    lastOpenedElement.getElementsByClassName("content")[0].style.background = "none";
     lastOpenedElement.getElementsByClassName("content")[0].innerHTML = title[lastOpenedElement.id];
 
     ids.filter(id => id != lastOpenedElement.id).forEach(id => {
