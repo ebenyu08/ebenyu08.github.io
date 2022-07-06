@@ -10,13 +10,29 @@ function fullScreen(element) {
 function changeContent(element) {
     element.getElementsByClassName("image")[0].style.animation = "blur-image 1s";
     element.getElementsByClassName("image")[0].style.filter = "blur(4px)";
+
+    if (window.innerWidth < 800) {
+        element.getElementsByClassName("image")[0].style.backgroundPosition = "center right";
+    } else {
+        element.getElementsByClassName("image")[0].style.backgroundPosition = "center center";
+    }
+
     element.getElementsByClassName("content")[0].style.animation = "text-fade-in 2s";
     element.getElementsByClassName("content")[0].style.cursor = "default";
     element.getElementsByClassName("content")[0].style.fontSize = "0.6em";
     element.getElementsByClassName("content")[0].style.zIndex = "10";
     element.getElementsByClassName("content")[0].style.height = "auto";
+    element.getElementsByClassName("content")[0].style.paddingTop = "20px";
+    element.getElementsByClassName("content")[0].style.paddingBottom = "20px";
+    element.getElementsByClassName("content")[0].style.marginTop = "0";
     element.getElementsByClassName("content")[0].style.background = "rgba(0, 0, 0, 0.3)";
-    element.getElementsByClassName("content")[0].innerHTML = content[element.id];
+    element.getElementsByClassName("text-content")[0].innerHTML = content[element.id];
+
+    if (element.id === "info-container") {
+        element.getElementsByClassName("content")[0].style.alignItems = "end";
+        element.getElementsByClassName("content")[0].style.textAlign = "right";
+    }
+
     lastOpenedElement = element
     
 }
@@ -29,8 +45,25 @@ function restoreContainer() {
     lastOpenedElement.getElementsByClassName("content")[0].style.animation = "text-fade-in-2 1s";
     lastOpenedElement.getElementsByClassName("image")[0].style.animation = "unblur-image 1s";
     lastOpenedElement.getElementsByClassName("image")[0].style.filter = "blur(0px)";
+
+    if (window.innerWidth < 800) {
+        lastOpenedElement.getElementsByClassName("image")[0].style.backgroundSize = "140vw";
+        lastOpenedElement.getElementsByClassName("image")[0].style.backgroundPosition = "center right";
+        lastOpenedElement.getElementsByClassName("content")[0].style.height = "60%";
+    } else {
+        lastOpenedElement.getElementsByClassName("image")[0].style.backgroundSize = "cover";
+        lastOpenedElement.getElementsByClassName("image")[0].style.backgroundPosition = "center center";
+        lastOpenedElement.getElementsByClassName("content")[0].style.height = "auto";
+        lastOpenedElement.getElementsByClassName("content")[0].style.marginTop = "50vh";
+    }
+
+    lastOpenedElement.getElementsByClassName("content")[0].style.paddingTop = "0px";
+    lastOpenedElement.getElementsByClassName("content")[0].style.paddingBottom = "0px";
+    lastOpenedElement.getElementsByClassName("content")[0].style.paddingRight = "0px";
     lastOpenedElement.getElementsByClassName("content")[0].style.background = "none";
-    lastOpenedElement.getElementsByClassName("content")[0].innerHTML = title[lastOpenedElement.id];
+    lastOpenedElement.getElementsByClassName("content")[0].style.alignItems = "center";
+    lastOpenedElement.getElementsByClassName("content")[0].style.textAlign = "center";
+    lastOpenedElement.getElementsByClassName("text-content")[0].innerHTML = title[lastOpenedElement.id];
 
     ids.filter(id => id != lastOpenedElement.id).forEach(id => {
         console.log(id);

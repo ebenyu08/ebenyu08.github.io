@@ -118,7 +118,7 @@ a {
     min-height: 0;
     overflow: hidden;
     transition: flex 0.5s ease-in-out;
-    pointer-events: none;
+    pointer-events: auto;
 }
 
 .column:hover {
@@ -136,13 +136,18 @@ a {
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+    text-align: center;
 
     color: white;
     cursor: pointer;
     position: absolute;
     white-space: pre;
-    pointer-events: auto;
     width: 100%;
+    margin-top: 50vh;
+}
+
+.text-content {
+    padding: 20px;
 }
 
 /* ids */
@@ -182,7 +187,20 @@ a {
     }
 
     .content {
-        height: 80%;
+        margin-top: 0;
+        height: 60%;
+    }
+
+    #info, #dev, #fitness {
+        background-size: 140vw;
+        transform: scale(1.2);
+        background-position: center right;
+    }
+
+    #music {
+        background-size: 140vw;
+        transform: scale(1.4);
+        background-position: center right;
     }
 }
 
