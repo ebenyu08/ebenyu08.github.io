@@ -79,11 +79,38 @@ function restoreContainer() {
     });
 
     hideBackButton();
+    lastOpenedElement = null;
 }
 
 function hideBackButton() {
     var backButton = document.getElementById("back-button");
     backButton.style.opacity = "0";
+}
+
+function applyHungarian() {
+    content = {
+        "info-container": "Kávéfüggő. \nSzoftverfejlesztés felé indult a karrierem \nés közben elmélyültem az erőfejlesztés világában és tudományában.\nSzívemhez legközelebb a zene áll, \nde az továbbra is hobby marad.",
+        "dev-container": "Github profilomon megtekinthetőek a személyes projektjeim. \n <a href=\"https://github.com/ebenyu08?tab=repositories\" target=\"_blank\" class=\"fa fa-github\"></a>",
+        "music-container": "Hamarosan...",
+        "fitness-container": "Ősztől..."
+    }
+
+    if (lastOpenedElement !== null) {
+        lastOpenedElement.getElementsByClassName("text-content")[0].innerHTML = content[lastOpenedElement.id];
+    }
+}
+
+function applyEnglish() {
+    content = {
+        "info-container": "Slightly addicted to coffee. \nChose software development as a career, \nbecame passionate about fitness & strength training.\nMusic is probably even closer to my heart, \nbut it will stay as a hobby for now.",
+        "dev-container": "Check out my GitHub repository to see my personal projects. \n <a href=\"https://github.com/ebenyu08?tab=repositories\" target=\"_blank\" class=\"fa fa-github\"></a>",
+        "music-container": "Soon... or not",
+        "fitness-container": "This fall..."
+    }
+
+    if (lastOpenedElement !== null) {
+        lastOpenedElement.getElementsByClassName("text-content")[0].innerHTML = content[lastOpenedElement.id];
+    }
 }
 
 var ids = ["info-container", "dev-container", "music-container", "fitness-container"];
@@ -100,4 +127,4 @@ var content = {
     "fitness-container": "Sooner..."
 }
 
-var lastOpenedElement;
+var lastOpenedElement = null;

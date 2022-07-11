@@ -52,6 +52,17 @@ a {
     transform: scale(1.2);
 }
 
+.languages {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    height: 80%;
+    width: 1%;
+}
+
 .social-links {
     display: flex;
     flex-wrap: wrap;
