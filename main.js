@@ -30,7 +30,7 @@ function changeContent(element) {
 
     if (element.id === "info-container") {
         element.getElementsByClassName("content")[0].style.alignItems = "end";
-        element.getElementsByClassName("content")[0].style.textAlign = "right";
+        element.getElementsByClassName("content")[0].style.textAlign = "center";
     }
 
     showBackButton();
