@@ -13,13 +13,14 @@
   <link rel="preload" as="image" href="./resources/images/drums.jpg">
   <link rel="preload" as="image" href="./resources/images/fitness.jpg">
   <link rel="preload" as="image" href="./resources/images/me.jpg">
-  <title>Benjamin Egri</title>
+  <title>My website</title>
   <script src="main.js"></script>
 </head>
 
 <body>
   <header class="header">
-    <button onclick="restoreContainer()" style="background: none; border: none; cursor: pointer;">
+    <button onclick="restoreContainer()" style="background: none; border: none; cursor: pointer; opacity: 0;"
+      id="back-button">
       <!-- <img src="./resources/icons/home.png" style="filter: invert();"> -->
       <svg class="home-button" xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="0 0 24 24" width="3vw">
         <path d="M0 0h24v24H0z" fill="none" />
@@ -36,25 +37,25 @@
     <div class="column" id="info-container" onclick="fullScreen(this)">
       <div class="image" id="info"></div>
       <div class="content">
-        <div class="text-content">About Me</div>
+        <div class="text-content"></div>
       </div>
     </div>
     <div class="column" id="dev-container" onclick="fullScreen(this)">
       <div class="image" id="dev"></div>
       <div class="content">
-        <div class="text-content">Development</div>
+        <div class="text-content"></div>
       </div>
     </div>
     <div class="column" id="music-container" onclick="fullScreen(this)">
       <div class="image" id="music"></div>
       <div class="content">
-        <div class="text-content">Music</div>
+        <div class="text-content"></div>
       </div>
     </div>
     <div class="column" id="fitness-container" onclick="fullScreen(this)">
       <div class="image" id="fitness"></div>
       <div class="content">
-        <div class="text-content">Fitness</div>
+        <div class="text-content"></div>
       </div>
     </div>
   </div>

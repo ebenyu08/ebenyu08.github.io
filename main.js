@@ -12,7 +12,7 @@ function changeContent(element) {
     element.getElementsByClassName("image")[0].style.filter = "blur(4px)";
 
     if (window.innerWidth < 800) {
-        element.getElementsByClassName("image")[0].style.backgroundPosition = "center right";
+        element.getElementsByClassName("image")[0].style.backgroundPosition = "right right";
     } else {
         element.getElementsByClassName("image")[0].style.backgroundPosition = "center center";
     }
@@ -33,8 +33,15 @@ function changeContent(element) {
         element.getElementsByClassName("content")[0].style.textAlign = "right";
     }
 
+    showBackButton();
+
     lastOpenedElement = element
     
+}
+
+function showBackButton() {
+    var backButton = document.getElementById("back-button");
+    backButton.style.opacity = "1";
 }
 
 function restoreContainer() {
@@ -47,8 +54,8 @@ function restoreContainer() {
     lastOpenedElement.getElementsByClassName("image")[0].style.filter = "blur(0px)";
 
     if (window.innerWidth < 800) {
-        lastOpenedElement.getElementsByClassName("image")[0].style.backgroundSize = "140vw";
-        lastOpenedElement.getElementsByClassName("image")[0].style.backgroundPosition = "center right";
+        lastOpenedElement.getElementsByClassName("image")[0].style.backgroundSize = "130vh";
+        lastOpenedElement.getElementsByClassName("image")[0].style.backgroundPosition = "right right";
         lastOpenedElement.getElementsByClassName("content")[0].style.height = "60%";
     } else {
         lastOpenedElement.getElementsByClassName("image")[0].style.backgroundSize = "cover";
@@ -70,14 +77,21 @@ function restoreContainer() {
         var element = document.getElementById(id);
         element.style.flex = "1";
     });
+
+    hideBackButton();
+}
+
+function hideBackButton() {
+    var backButton = document.getElementById("back-button");
+    backButton.style.opacity = "0";
 }
 
 var ids = ["info-container", "dev-container", "music-container", "fitness-container"];
 var title = { 
-    "info-container": "About Me",
-    "dev-container": "Development",
-    "music-container": "Music",
-    "fitness-container": "Fitness"
+    "info-container": "",
+    "dev-container": "",
+    "music-container": "",
+    "fitness-container": ""
 }
 var content = {
     "info-container": "Slightly addicted to coffee. \nChose software development as a career, \nbecame passionate about fitness & strength training.\nMusic is probably even closer to my heart, \nbut it will stay as a hobby for now.",
