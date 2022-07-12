@@ -20,8 +20,8 @@ function changeContent(element) {
     element.getElementsByClassName("content")[0].style.animation = "text-fade-in 2s";
     element.getElementsByClassName("content")[0].style.cursor = "default";
     element.getElementsByClassName("content")[0].style.fontSize = "0.6em";
-    element.getElementsByClassName("content")[0].style.zIndex = "10";
-    element.getElementsByClassName("content")[0].style.height = "auto";
+    element.getElementsByClassName("content")[0].style.zIndex = "5";
+    element.getElementsByClassName("content")[0].style.height = "100%";
     element.getElementsByClassName("content")[0].style.paddingTop = "20px";
     element.getElementsByClassName("content")[0].style.paddingBottom = "20px";
     element.getElementsByClassName("content")[0].style.marginTop = "0";
@@ -29,7 +29,7 @@ function changeContent(element) {
     element.getElementsByClassName("text-content")[0].innerHTML = content[element.id];
 
     if (element.id === "info-container") {
-        element.getElementsByClassName("content")[0].style.alignItems = "center";
+        element.getElementsByClassName("content")[0].style.alignItems = "end";
         element.getElementsByClassName("content")[0].style.textAlign = "center";
     }
 
@@ -89,7 +89,7 @@ function hideBackButton() {
 
 function applyHungarian() {
     content = {
-        "info-container": "Kávéfüggő. \nSzoftverfejlesztés felé indult a karrierem \nés közben elmélyültem az erőfejlesztés világában és tudományában.\nSzívemhez legközelebb a zene áll, \nde az továbbra is hobby marad.",
+        "info-container": "Hello",
         "dev-container": "Github profilomon megtekinthetőek a személyes projektjeim. \n <a href=\"https://github.com/ebenyu08?tab=repositories\" target=\"_blank\" class=\"fa fa-github\"></a>",
         "music-container": "Hamarosan...",
         "fitness-container": "Ősztől..."
