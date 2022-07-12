@@ -29,7 +29,7 @@ function changeContent(element) {
     element.getElementsByClassName("text-content")[0].innerHTML = content[element.id];
 
     if (element.id === "info-container") {
-        element.getElementsByClassName("content")[0].style.alignItems = "end";
+        element.getElementsByClassName("content")[0].style.alignItems = "center";
         element.getElementsByClassName("content")[0].style.textAlign = "center";
     }
 
