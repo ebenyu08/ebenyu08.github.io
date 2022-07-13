@@ -27,6 +27,7 @@ function changeContent(element) {
     element.getElementsByClassName("content")[0].style.marginTop = "0";
     element.getElementsByClassName("content")[0].style.background = "rgba(0, 0, 0, 0.3)";
     element.getElementsByClassName("text-content")[0].innerHTML = content[element.id];
+    element.style.pointerEvents = "none";
 
     if (element.id === "info-container") {
         element.getElementsByClassName("content")[0].style.alignItems = "center";
@@ -71,6 +72,7 @@ function restoreContainer() {
     lastOpenedElement.getElementsByClassName("content")[0].style.alignItems = "center";
     lastOpenedElement.getElementsByClassName("content")[0].style.textAlign = "center";
     lastOpenedElement.getElementsByClassName("text-content")[0].innerHTML = title[lastOpenedElement.id];
+    lastOpenedElement.style.pointerEvents = "auto";
 
     ids.filter(id => id != lastOpenedElement.id).forEach(id => {
         console.log(id);
@@ -125,6 +127,20 @@ var content = {
     "dev-container": "Check out my GitHub repository to see my personal projects. \n <a href=\"https://github.com/ebenyu08?tab=repositories\" target=\"_blank\" class=\"fa fa-github\"></a>",
     "music-container": "Soon... or not",
     "fitness-container": "Sooner..."
+}
+
+var backgrounds = {
+    "info-container": "url('./resources/images/me.jpg')",
+    "dev-container": "url('./resources/images/dev.jpg')",
+    "music-container": "url('./resources/images/drums.jpg)",
+    "fitness-container": "url('./resources/images/fitness.jpg')"
+}
+
+var backgroundGifs = {
+    "info-container": "url('./resources/images/me.jpg')",
+    "dev-container": "url('./resources/images/dev.webp')",
+    "music-container": "url('./resources/images/music.webp')",
+    "fitness-container": "url('./resources/images/squat.webp')"
 }
 
 var lastOpenedElement = null;

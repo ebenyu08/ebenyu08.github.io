@@ -150,49 +150,49 @@ a {
 
 /* ids */
 
-#info-container {
+#info {
     background-image: url('../resources/images/me.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 }
 
-#dev-container {
+#dev {
     background-image: url('../resources/images/dev.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 }
 
-#dev-container:hover {
+#dev:hover {
     background-image: url('../resources/images/dev.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 40% 0%;
 }
 
-#music-container {
+#music {
     background-image: url('../resources/images/drums.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 } 
 
-#music-container:hover {
+#music:hover {
     background-image: url('../resources/images/music.webp');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 30% 0%;
 }
 
-#fitness-container {
+#fitness {
     background-image: url('../resources/images/fitness.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
 }
 
-#fitness-container:hover {
+#fitness:hover {
     background-image: url('../resources/images/squat.webp');
     background-size: cover;
     background-repeat: no-repeat;
