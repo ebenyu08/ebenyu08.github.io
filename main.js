@@ -126,7 +126,7 @@ var content = {
     "info-container": "Hello",
     "dev-container": "Check out my GitHub repository to see my personal projects. \n <a href=\"https://github.com/ebenyu08?tab=repositories\" target=\"_blank\" class=\"fa fa-github\"></a>",
     "music-container": "Soon... or not",
-    "fitness-container": "Sooner..."
+    "fitness-container": "This fall..."
 }
 
 var backgrounds = {
