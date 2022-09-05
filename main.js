@@ -91,7 +91,7 @@ function hideBackButton() {
 
 function applyHungarian() {
     content = {
-        "info-container": "Hello",
+        "info-container": "Üdv a személyes honlapomon! \n\nNégy része van az oldalnak: \n1. Itt vagy most \n2. Ez a személyes projektjeimhez vezet \n3. Ha eljön az idő, akkor itt megtalálhatóak lesznek a zenéim \n4. Itt a személyi edzői oldalamról tudhatsz meg többet",
         "dev-container": "Github profilomon megtekinthetőek a személyes projektjeim. \n <a href=\"https://github.com/ebenyu08?tab=repositories\" target=\"_blank\" class=\"fa fa-github\"></a>",
         "music-container": "Hamarosan...",
         "fitness-container": "Ősztől..."
@@ -104,7 +104,7 @@ function applyHungarian() {
 
 function applyEnglish() {
     content = {
-        "info-container": "Hello",
+        "info-container": "Welcome to my personal website! \n\nThere are four sections: \n1. You are here \n2. This leads you to a few of my personal projects \n3. I will share my music here, when the time is right \n4. Find info about my personal trainer endeavors",
         "dev-container": "Check out my GitHub repository to see my personal projects. \n <a href=\"https://github.com/ebenyu08?tab=repositories\" target=\"_blank\" class=\"fa fa-github\"></a>",
         "music-container": "Soon... or not",
         "fitness-container": "This fall..."
@@ -123,7 +123,7 @@ var title = {
     "fitness-container": ""
 }
 var content = {
-    "info-container": "Hello",
+    "info-container": "Welcome to my personal website! \n\nThere are four sections: \n1. You are here \n2. This leads you to a few of my personal projects \n3. I will share my music here, when the time is right \n4. Find info about my personal trainer endeavors",
     "dev-container": "Check out my GitHub repository to see my personal projects. \n <a href=\"https://github.com/ebenyu08?tab=repositories\" target=\"_blank\" class=\"fa fa-github\"></a>",
     "music-container": "Soon... or not",
     "fitness-container": "This fall..."
